@@ -1,0 +1,2 @@
+.navbar{height:var(--nav-size);display:flex;align-items:center}.navbar-nav{width:100%;display:flex;position:fixed;transition:.6s;z-index:100000}.icon-right{margin-left:auto}:root{--bg:#2f2d38;--bg-accent:#1f1f25;--text-color:#f5ead2;--hover-color:#9fff80;--nav-size:6.3rem;--border-radius:8px;--speed:500ms}*{padding:0;margin:0;font-family:"Poppins";outline:0;font-size:62.5%}
+/*# sourceMappingURL=main.c0d7c2fa.chunk.css.map */
