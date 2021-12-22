@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { BiRightArrow } from 'react-icons/bi'
 import { Routes, Route, Link } from "react-router-dom";
 import { HomeContainer, Banner, Header, SubHeader, Description, Button } from "../styles/homeStyles";
-import Face from'../img/self-portrait.jpg';
-
+import Face from '../img/self-portrait.jpg';
+import Tilted from "./Tilted"
+import { motion, AnimatePresence } from "framer-motion"
 
 export function Home() {
   return (
@@ -17,9 +18,10 @@ export function Home() {
         <Banner>
           <h3>Hello! Im a software engineer based in the U.S</h3>
         </Banner>
-        <div style={{ width: "20rem", height: "20rem", backgroundColor: "transparent", borderRadius: "0px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-          
-          <img src={Face} style={{boxShadow: "2px 2px 15px #00000090",width: "100%", borderRadius: "20px", filter: "brightness(60%) contrast(95%)"}}></img>
+        <Tilted image={Face}/>
+        <div style={{ width: "20rem", height: "20rem", backgroundColor: "transparent", borderRadius: "0px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+
+          <img src={Face} style={{ boxShadow: "2px 2px 15px #00000090", width: "100%", borderRadius: "20px", filter: "brightness(60%) contrast(95%)" }}></img>
         </div>
 
         <Header>
@@ -34,10 +36,10 @@ export function Home() {
           </p>
         </Description>
 
-        <Link to="/portfolio" style={{ color: "inherit", textDecoration: "none"}}>
-          <Button>
-            <h3>My Portfolio</h3><BiRightArrow size={25} />
-          </Button>
+        <Link to="/portfolio" style={{ color: "inherit", textDecoration: "none" }}>
+            <Button>
+              <h3>My Portfolio</h3><BiRightArrow size={25} />
+            </Button>
 
         </Link>
 
@@ -51,5 +53,6 @@ export function Home() {
       </HomeContainer>
 
     </body>
+
   );
 }

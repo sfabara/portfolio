@@ -7,7 +7,7 @@ export const HomeContainer = styled.section`
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 15rem;
+    padding: 10rem;
 
     & h1{
         font-size: 5rem;
