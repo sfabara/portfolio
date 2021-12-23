@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { BiRightArrow } from 'react-icons/bi'
 import { Routes, Route, Link } from "react-router-dom";
-import { HomeContainer, Banner, Header, SubHeader, Description, Button } from "../styles/homeStyles";
+import { HomeContainer, Banner, Header, SubHeader, Description, Button, Toolbox} from "../styles/homeStyles";
 import Face from '../img/self-portrait.jpg';
 import Tilted from "./Tilted"
 import { motion, AnimatePresence } from "framer-motion"
-
+import {FaReact, FaRust, FaNodeJs, FaPython, FaCss3, FaHtml5, FaNode } from "react-icons/fa"
+import {SiTypescript, SiJavascript, SiPostgresql} from "react-icons/si" 
+import "../styles/home.css"
 export function Home() {
   return (
     <body>
@@ -19,16 +21,16 @@ export function Home() {
           <h3>Hello! Im a software engineer based in the U.S</h3>
         </Banner>
         <Tilted image={Face}/>
-        <div style={{ width: "20rem", height: "20rem", backgroundColor: "transparent", borderRadius: "0px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+        {/* <div style={{ width: "20rem", height: "20rem", backgroundColor: "transparent", borderRadius: "0px", display: "flex", alignItems: "center", justifyContent: "center" }}>
 
           <img src={Face} style={{ boxShadow: "2px 2px 15px #00000090", width: "100%", borderRadius: "20px", filter: "brightness(60%) contrast(95%)" }}></img>
-        </div>
+        </div> */}
 
         <Header>
           <h1 style={{}}>Sebastian Fabara</h1>
         </Header>
         <SubHeader>
-          <h3> Full Stack | Blockchain | Design</h3>
+          <h3> Full Stack | Web 3.0 | Design</h3>
         </SubHeader>
         <Description>
           <p >
@@ -48,8 +50,16 @@ export function Home() {
 
 
       <HomeContainer>
-        <h1>What I Do</h1>
-
+        <h1>My Toolbox</h1>
+        <Toolbox className="toolbox">
+            <FaReact size={70} className="react"/>
+            <FaNode size={70} className="node"/>
+            <FaPython size={70} className="python"/>
+            <FaRust size={70} className="rust"/>
+            <FaNodeJs size={70} className="js"/>
+            <FaCss3 size={70} className="css"/>
+            <FaHtml5 size={70} className="html5"/>
+        </Toolbox>
       </HomeContainer>
 
     </body>

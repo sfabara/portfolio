@@ -105,14 +105,20 @@ export const Button = ({ onClick, children, className }) => {
 
 
 
-export default Button;
 
-//     .home - container h1 {
-//         font-size: 5rem;
-// text - align: center;
-//   }
-//   .home - container p {
-//     font - size: 2rem;
-//     text - align: center;
-//     margin: 0rem 0rem 0rem 5rem;
-// }
+export const Toolbox = styled(motion.div)`
+    background-color:${(props) => props.theme.accent};
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 85%;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    padding: 40px;
+    margin: 0px;
+    // box-shadow: 0px 33px 25px 0 #3449eb, 
+    //  0 66px 15px 0px #eb5634,
+    //  0 99px 5px 0px #fff;
+
+
+`;

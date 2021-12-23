@@ -4,6 +4,7 @@ import { useGesture } from 'react-use-gesture'
 import Face from "../img/self-portrait.jpg"
 import styles from './styles.module.css'
 
+const url = "https://images.unsplash.com/photo-1640195516482-aaab6c242863?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
 const calcX = (y, ly) => -(y - ly - window.innerHeight / 2) / 20
 const calcY = (x, lx) => (x - lx - window.innerWidth / 2) / 20
 
@@ -34,7 +35,7 @@ export default function Tilted(image) {
       zoom: 0,
       x: 0,
       y: 0,
-      config: { mass: 5, tension: 350, friction: 40 },
+      config: { mass: 5, tension: 500, friction: 30 },
     })
   )
 
@@ -42,15 +43,13 @@ export default function Tilted(image) {
 
   useGesture(
     {
-      onDrag: ({ active, offset: [x, y] }) =>
-        api({ x, y, rotateX: 0, rotateY: 0, scale: active ? 1 : 1.1 }),
-      onPinch: ({ offset: [d, a] }) => api({ zoom: d / 200, rotateZ: a }),
+
       onMove: ({ xy: [px, py], dragging }) =>
         !dragging &&
         api({
           rotateX: calcX(py, y.get()),
           rotateY: calcY(px, x.get()),
-          scale: 1.1,
+          scale: 1.3,
         }),
       onHover: ({ hovering }) =>
         !hovering && api({ rotateX: 0, rotateY: 0, scale: 1 }),
@@ -74,12 +73,13 @@ export default function Tilted(image) {
           rotateX,
           rotateY,
           rotateZ,
+          backgroundImage: "url(https://i.ibb.co/fDzjB2m/self-portrait.jpg)"
         }}
        
         >
         <animated.div style={{ transform: wheelY.to(wheel) }}>
-            {/* <div style={{ backgroundImage: `url(${Face})` }} /> */}
-            <img src={Face} style={{zIndex: "10000", backgroundImage: `url(${Face})`}}/>
+            {/* <div key={1} style={{ backgroundImage: `url(${url})` }} /> */}
+            {/* <img src={Face} style={{zIndex: "10000", backgroundImage: `url(${Face})`}}/> */}
         </animated.div>
       </animated.div>
     </div>

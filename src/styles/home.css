@@ -1,0 +1,38 @@
+.toolbox svg{
+    padding: 10px;
+}
+.toolbox svg:hover{
+    border-radius: 20px;
+    background-color: rgb(31, 29, 29)
+}
+
+.react:hover {
+    box-shadow: inset 10px 12px 30px  rgb(83, 137, 187), inset -10px -10px 20px #61DBFB ;
+}
+
+.node:hover{
+    box-shadow: inset 10px 12px 30px #68A063, inset -10px -10px 20px #3c873A ;
+}
+
+.python:hover{
+    box-shadow: inset 10px 12px 30px #364fbe, inset -10px -10px 20px #e0d53a ;
+}
+
+.rust:hover{
+    box-shadow: inset 10px 12px 30px #a85f1b, inset -10px -10px 20px #aa3600 ;
+}
+
+.js:hover{
+    box-shadow: inset 10px 12px 30px #fcc81c, inset -10px -10px 20px #c9c040 ;
+
+}
+
+.css:hover{
+    box-shadow: inset 10px 12px 30px #1b5da8, inset -10px -10px 20px #0004ff ;
+
+}
+
+.html5:hover{
+    box-shadow: inset 10px 12px 30px #ee1515, inset -10px -10px 20px #9b3b0e ;
+
+}
