@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 export const Root = styled.html`
   color: ${(props) => props.theme.textColor};
   background-color: ${(props) => props.theme.background};
-  height: 300rem;
+  height: 200rem;
 `;
 
 export const Meow = styled.button`

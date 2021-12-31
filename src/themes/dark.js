@@ -5,5 +5,5 @@ export default {
   textColor: "rgb(245, 234, 210)",
   buttonColor: "rgb(245,234,210)",
   fancyButtonColor: "#25282e",
-  hoverColor: "orange",
+  hoverColor: "#ed2879",
 };

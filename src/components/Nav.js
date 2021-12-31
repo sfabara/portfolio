@@ -67,7 +67,7 @@ function NavItem(props) {
   return (
     <NavItemStyle>
       <IconButtonStyle>
-        <a href="#" onClick={() => setOpen(!open)}>
+        <a href="#/" onClick={() => setOpen(!open)}>
           {props.icon}
         </a>
 
@@ -83,7 +83,7 @@ function NavLink(props) {
   return (
     <NavLinksStyle>
       <li>
-        <a href="#">🚀 Sebastian Fabara</a>
+        <a href="#/">🚀 Sebastian Fabara</a>
       </li>
     </NavLinksStyle>
   );
@@ -92,7 +92,7 @@ function NavLink(props) {
 function DropdownMenu(props) {
   function DropdownItem(props) {
     return (
-      <MenuItemStyle href="#">
+      <MenuItemStyle href="#/">
         <span className="icon-left">{props.leftIcon}</span>
         {props.children}
         <span className="icon-right">{props.rightIcon}</span>

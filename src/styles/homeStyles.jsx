@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import{ motion} from 'framer-motion'
+import { motion } from 'framer-motion'
 import React from 'react'
 
 export const HomeContainer = styled.section`
@@ -57,7 +57,7 @@ export const SubHeader = styled.div`
 
 
 `
-export const Description = styled.div `
+export const Description = styled.div`
     width: 70rem;
     margin: 30px;
     & p {
@@ -89,17 +89,17 @@ export const MyButton = styled(motion.div)`
 `;
 
 export const Button = ({ onClick, children, className }) => {
-  return (
-    <MyButton
-      className={className}
-      whileHover={{
-        scale: 1.1,
-        transition: { duration: .3 },
-      }}
-      whileTap={{ scale: 0.9 }} onClick={onClick} >
-      {children}
-    </MyButton>
-  )
+    return (
+        <MyButton
+            className={className}
+            whileHover={{
+                scale: 1.1,
+                transition: { duration: .3 },
+            }}
+            whileTap={{ scale: 0.9 }} onClick={onClick} >
+            {children}
+        </MyButton>
+    )
 }
 
 
@@ -107,18 +107,48 @@ export const Button = ({ onClick, children, className }) => {
 
 
 export const Toolbox = styled(motion.div)`
-    background-color:${(props) => props.theme.accent};
+    background-color: t;
     display: flex;
     justify-content: space-around;
-    align-items: center;
     width: 85%;
     flex-wrap: wrap;
     border-radius: 10px;
     padding: 40px;
-    margin: 0px;
+    margin: 10rem;
     // box-shadow: 0px 33px 25px 0 #3449eb, 
     //  0 66px 15px 0px #eb5634,
     //  0 99px 5px 0px #fff;
 
+    & svg{
+        background-color: ${(props) => props.theme.background}
+    }
+
 
 `;
+
+export const ToolIcon = styled(motion.div)`
+    padding: 10px;
+    & :hover{
+
+    }
+
+`
+
+export const Floater = ({ onClick, children, className }) => {
+    return (
+        <ToolIcon
+            transition={{ type: "spring", stiffness: 125, damping: 7}}
+            whileHover={{
+
+                scale: 1.4
+
+
+
+            }}>
+            {children}
+        </ToolIcon>
+
+
+
+    )
+} 

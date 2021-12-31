@@ -32,6 +32,7 @@ export const DropDownStyle = styled.div`
   transition: height var(--speed) ease;
   outline: 0;
   text-decoration: none;
+  box-shadow: 4px 4px 15px #00000080;
   & h3 {
     color: ${(props) => props.theme.textColor};
     font-size: 2rem;

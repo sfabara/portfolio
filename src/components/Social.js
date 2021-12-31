@@ -2,26 +2,33 @@ import React, { useState, useEffect } from "react";
 import { SocialStyles, SocialBtn } from "../styles/socialStyles.js";
 import { FaGithubSquare, FaTwitterSquare, FaLinkedin } from 'react-icons/fa'
 import { motion } from 'framer-motion'
+import { Link } from "react-router-dom";
 
 export function Social() {
   return (
     <SocialStyles linkedin={"#0e76a8"} github={"#171515"} twitter={"#00acee"} >
       <ul>
         <li>
-          <IconContainer hoverColor={"#123456"} >
-            <FaLinkedin size={50} />
-          </IconContainer>
+          <a href="https://www.linkedin.com/in/sfabara/">
+            <IconContainer hoverColor={"#123456"} >
+              <FaLinkedin size={50} />
+            </IconContainer>
+          </a>
+
         </li>
         <li>
-          <IconContainer>
-            <FaGithubSquare size={50} />
+          <a href="https://github.com/sfabara/">
+            <IconContainer>
+              <FaGithubSquare size={50} />
 
-          </IconContainer>
+            </IconContainer>
+          </a>
+
 
         </li>
         <li>
           <IconContainer hoverColor={"#0e76a8"}>
-            <FaTwitterSquare size={50} style={{}}/>
+            <FaTwitterSquare size={50} style={{}} />
 
           </IconContainer>
 
@@ -31,15 +38,15 @@ export function Social() {
   );
 }
 
-export const IconContainer = ({ children, hoverColor}) => {
+export const IconContainer = ({ children, hoverColor }) => {
   return (
     <motion.div
       className={hoverColor}
-      style={{borderRadius: "10px"}}
+      style={{ borderRadius: "10px" }}
       whileHover={{
         scale: 1.25,
         transition: { duration: .5 },
-        
+
       }}
       whileTap={{ scale: .9 }}
     >

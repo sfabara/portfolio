@@ -29,8 +29,9 @@ const App = () => {
   return (
     <div className="App">
       <ThemeProvider theme={getTheme(theme)}>
+        <Nav />
+
         <Root>
-          <Nav />
           <Social />
           <Routes>
             <Route path="/" element={<HomePage />} />

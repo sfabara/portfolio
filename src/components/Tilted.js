@@ -73,7 +73,7 @@ export default function Tilted(image) {
           rotateX,
           rotateY,
           rotateZ,
-          backgroundImage: "url(https://i.ibb.co/fDzjB2m/self-portrait.jpg)"
+          backgroundImage: "url(https://i.ibb.co/j8s1Lfx/self-portrait.jpg)"
         }}
        
         >
