@@ -9,7 +9,7 @@ export function Social() {
     <SocialStyles linkedin={"#0e76a8"} github={"#171515"} twitter={"#00acee"} >
       <ul>
         <li>
-          <a href="https://www.linkedin.com/in/sfabara/">
+          <a href="https://www.linkedin.com/in/sfabara/" style={{ color: "inherit" }} target="_blank">
             <IconContainer hoverColor={"#123456"} >
               <FaLinkedin size={50} />
             </IconContainer>
@@ -17,7 +17,7 @@ export function Social() {
 
         </li>
         <li>
-          <a href="https://github.com/sfabara/">
+          <a href="https://github.com/sfabara/" style={{ color: "inherit" }} target="_blank">
             <IconContainer>
               <FaGithubSquare size={50} />
 
@@ -27,11 +27,12 @@ export function Social() {
 
         </li>
         <li>
-          <IconContainer hoverColor={"#0e76a8"}>
-            <FaTwitterSquare size={50} style={{}} />
+          <a href="https://twitter.com/de_central_dan" style={{ color: "inherit" }} target="_blank">
+            <IconContainer hoverColor={"#0e76a8"}>
+              <FaTwitterSquare size={50} style={{}} />
 
-          </IconContainer>
-
+            </IconContainer>
+          </a>
         </li>
       </ul>
     </SocialStyles>
