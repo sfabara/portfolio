@@ -49,7 +49,7 @@ export default function Tilted(image) {
         api({
           rotateX: calcX(py, y.get()),
           rotateY: calcY(px, x.get()),
-          scale: 1.3,
+          scale: 1.15,
         }),
       onHover: ({ hovering }) =>
         !hovering && api({ rotateX: 0, rotateY: 0, scale: 1 }),
