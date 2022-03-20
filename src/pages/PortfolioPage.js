@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { Portfolio } from "../components/Portfolio/Portfolio";
 
 const PortfolioPage = () =>
 {
-    console.log("In portfolio")
     return(
         <>
-
+            <Portfolio/>
         </>
     )
 }

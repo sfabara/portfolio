@@ -1,0 +1,17 @@
+.navbar {
+  height: var(--nav-size);
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav {
+  width: 100%;
+  display: flex;
+  position: fixed;
+  transition: 0.6s;
+  z-index: 100000;
+}
+
+.icon-right {
+  margin-left: auto;
+}

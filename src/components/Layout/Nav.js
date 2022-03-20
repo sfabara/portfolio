@@ -3,7 +3,7 @@ import { BiMenuAltRight } from 'react-icons/bi'
 import { Link } from "react-router-dom";
 import { Switch } from "@material-ui/core";
 import { ThemeProvider } from "styled-components";
-import { getTheme } from "../getTheme.js";
+import { getTheme } from "../../getTheme.js";
 import {
   HeadStyle,
   DropDownStyle,
@@ -11,12 +11,12 @@ import {
   NavItemStyle,
   IconButtonStyle,
   MenuItemStyle,
-} from "../styles/navStyles.js";
+} from "./styles/navStyles.js";
 import { setGlobal, useGlobal } from "reactn";
 
 import { RiHomeHeartLine, RiBriefcase3Line, RiPaintFill } from 'react-icons/ri'
 
-import "../styles/Nav.css";
+import "./styles/Nav.css";
 
 setGlobal({ onTheme: true });
 
@@ -83,7 +83,7 @@ function NavLink(props) {
   return (
     <NavLinksStyle>
       <li>
-        <a href="#/">🚀 Sebastian Fabara</a>
+        <a href="/">🚀 Sebastian Fabara</a>
       </li>
     </NavLinksStyle>
   );

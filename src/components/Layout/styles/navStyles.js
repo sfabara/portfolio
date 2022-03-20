@@ -45,7 +45,7 @@ export const NavLinksStyle = styled.div`
   display: flex;
   flex-grow: 9;
   position: relative;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
   & ul {
     position: relative;
@@ -112,12 +112,12 @@ export const IconContainer = ({ children }) => {
 }
 
 export const MenuItemStyle = styled.a`
-  height: 50px;
+  height: 40px;
   display: flex;
   align-items: center;
   border-radius: var(--border-radius);
   transition: background var(--speed);
-  padding: 0.5rem;
+  padding: 1.5rem;
   outline: 0;
   &:hover {
     background-color: #52535770;

@@ -1,8 +1,8 @@
 import React, { useRef, useEffect } from 'react'
 import { useSpring, animated, to } from '@react-spring/web'
 import { useGesture } from 'react-use-gesture'
-import Face from "../img/self-portrait.jpg"
-import styles from './styles.module.css'
+import Face from "../../img/self-portrait.jpg"
+import styles from './styles/tilted.module.css'
 
 const url = "https://images.unsplash.com/photo-1640195516482-aaab6c242863?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
 const calcX = (y, ly) => -(y - ly - window.innerHeight / 2) / 20

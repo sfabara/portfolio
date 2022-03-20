@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import { BiRightArrow } from 'react-icons/bi'
 import { Routes, Route, Link } from "react-router-dom";
-import { HomeContainer, Banner, Header, SubHeader, Description, Button, Toolbox, Floater } from "../styles/homeStyles";
-import Face from '../img/self-portrait.jpg';
+import { HomeContainer, Banner, Header, SubHeader, Description, Button, Toolbox, Floater } from "./styles/homeStyles";
+import Face from '../../img/self-portrait.jpg';
 import Tilted from "./Tilted"
-import { motion, AnimatePresence } from "framer-motion"
 import { FaReact, FaRust, FaNodeJs, FaPython, FaCss3, FaHtml5, FaNode } from "react-icons/fa"
-import { SiTypescript, SiJavascript, SiPostgresql } from "react-icons/si"
-import "../styles/home.css"
+import "./styles/home.css"
 import ReactTooltip from 'react-tooltip';
 
 export function Home() {

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { SocialStyles, SocialBtn } from "../styles/socialStyles.js";
+import { SocialStyles, SocialBtn } from "./styles/socialStyles.js";
 import { FaGithubSquare, FaTwitterSquare, FaLinkedin } from 'react-icons/fa'
 import { motion } from 'framer-motion'
 import { Link } from "react-router-dom";

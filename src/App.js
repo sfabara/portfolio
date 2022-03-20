@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Nav } from "./components/Nav.js";
-import { Home } from "./components/Home.js";
-import { Social } from "./components/Social.js";
+import { Nav } from "./components/Layout/Nav.js";
+import { Social } from "./components/Layout/Social.js";
 import { ThemeProvider } from "styled-components";
-import { THEMES } from "./constants/theme";
 import { getTheme } from "./getTheme.js";
 import { Root } from "./styles/appStyles.js";
 import "./styles/App.css";
@@ -23,8 +21,10 @@ const App = () => {
   console.log("Theme: ", useGlobal("onTheme")[0]);
 
   useEffect(() => {
-    if (theTheme == false) setTheme("light");
-    else setTheme("dark");
+    if (theTheme == false) 
+      setTheme("light");
+    else 
+      setTheme("dark");
   });
   return (
     <div className="App">
@@ -33,20 +33,16 @@ const App = () => {
 
         <Root>
           <Social />
+
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="portfolio" element={<PortfolioPage />} />
             <Route path="art" element={<ArtPage />} />
-
           </Routes>
 
         </Root>
 
-
-
-
       </ThemeProvider>
-
 
     </div>)
 
