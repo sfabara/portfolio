@@ -7,7 +7,7 @@ export const PortfolioHeaderContainer = styled.section`
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column;
-    padding: 20rem 20rem 10rem 20rem;
+    padding: 15rem 20rem 10rem 20rem;
 
     & h1{
         font-size: 5rem;

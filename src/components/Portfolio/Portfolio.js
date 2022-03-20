@@ -73,6 +73,9 @@ export function Portfolio() {
 
         <Card dir="left" />
         <Card dir="right" />
+        <Card dir="left" />
+        <Card dir="right" />
+
       </PortfolioContent>
 
     </body>
