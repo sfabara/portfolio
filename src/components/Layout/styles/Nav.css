@@ -2,6 +2,7 @@
   height: var(--nav-size);
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
 .navbar-nav {

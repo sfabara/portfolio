@@ -21,8 +21,9 @@ export const HeadStyle = styled.header`
 
 export const DropDownStyle = styled.div`
   position: absolute;
+  left: 28px;
   top: 70px;
-  width: 300px;
+  width: 25rem;
   transform: translateX(-90%);
   background-color: ${(props) => props.theme.accent};
   border: var(--border);
@@ -87,8 +88,7 @@ export const IconButtonStyle = styled.div`
     height: var(--button-size);
     background-color: ${(props) => props.theme.buttonColor};
     border-radius: 10%;
-    padding: 8px;
-    margin: 1px;
+    padding: 3px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -110,6 +110,10 @@ export const IconContainer = ({ children }) => {
 
   )
 }
+
+
+
+//inside the navbar here
 
 export const MenuItemStyle = styled.a`
   height: 40px;

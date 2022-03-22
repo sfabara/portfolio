@@ -33,13 +33,13 @@ export const ProjectCard = styled.div`
     display: flex;
     flex-direction: row;
     background-color: #00000020;
-    border-radius: 25px;
-    width: 100%;
+    border-radius: 15px;
+    width: 80%;
     padding: 2rem;
-    height: 35rem;
+    height: 10rem;
     flex-wrap:wrap;
     flex: 1;
-    margin: 0rem 0rem 20rem 0rem;
+    margin: 0rem 0rem 30rem 0rem;
     /* outline: 8px solid  #111318;
     -moz-outline-radius: 16px;
     box-shadow: 10px 10px 0px 20px #111318; */
@@ -65,8 +65,8 @@ export const ProjectTitle = styled.h2`
 `
 export const ProjectDescription = styled.p`
     font-size: 2.5rem;
-    font-weight: 100;
-    font-family: monospace !important;
+    font-weight: 400;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 2.5rem 0 2.5rem 0;
     height: 100%;
     `
@@ -77,7 +77,6 @@ export const ProjectDescription = styled.p`
 
 
 export const Header = styled.div`
-        border-radius: 10px;
 `
 
 export const SubHeader = styled.div`
@@ -102,11 +101,11 @@ export const SubHeader = styled.div`
 export const Description = styled.div`
 padding-top: 1rem;
 
-    width: 70rem;
+    width: 60rem;
     & p {
         font-weight: 200;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
 `

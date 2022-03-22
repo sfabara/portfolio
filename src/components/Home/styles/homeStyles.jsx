@@ -32,7 +32,7 @@ export const Banner = styled.div`
     padding: 15px;
     border-radius: 8px;
     margin: 40px;
-
+    text-align: center ;
     & h3{
         font-size: 2.0rem;
     }
@@ -49,18 +49,18 @@ export const Header = styled.div`
 `
 
 export const SubHeader = styled.div`
-
     & h3{
         font-family: monospace !important;
         font-weight: 100;
     }
-
-
 `
 export const Description = styled.div`
-    width: 70rem;
-    margin: 30px;
+    margin: 45px;
+    align-items: center;
+    justify-content:center ;
+    display: flex;
     & p {
+        width: 70%; 
         font-weight: 200;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         font-size: 2.5rem;
