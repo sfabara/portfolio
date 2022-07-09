@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import React from 'react'
-import{ motion} from 'framer-motion'
+import { motion } from 'framer-motion'
 
 export const SocialStyles = styled.div`
   display: flex;
@@ -21,6 +21,15 @@ export const SocialStyles = styled.div`
   & li{
     padding: .5rem;
   }
+
+  @media (max-width: 900px) {
+      padding: 0;
+      height: 0rem;
+      & svg{
+        width: 80%;
+      }
+
+    }
 `;
 
 
@@ -58,7 +67,7 @@ export const Button = ({ onClick, children, className }) => {
         transition: { duration: .3 },
       }}
       whileTap={{ scale: 10 }} onClick={onClick} >
-        meoww
+      meoww
       {children}
     </SocialBtn>
   )

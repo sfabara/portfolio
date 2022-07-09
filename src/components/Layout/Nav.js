@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { BiMenuAltRight } from 'react-icons/bi'
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { Switch } from "@material-ui/core";
-import { ThemeProvider } from "styled-components";
+import { ThemeProvider , useTheme} from "styled-components";
 import { getTheme } from "../../getTheme.js";
 import {
   HeadStyle,
@@ -24,6 +24,9 @@ export function Nav(props) {
   const [theme, setTheme] = useState("light");
   const [theTheme, setTheTheme] = useGlobal("onTheme");
 
+  const cur_theme = useTheme()
+
+
   useEffect(() => {
     if (theTheme == false) setTheme("light");
     else setTheme("dark");
@@ -41,8 +44,11 @@ export function Nav(props) {
     <ThemeProvider theme={getTheme(theme)}>
       <HeadStyle>
         <Navbar>
-          <NavLink></NavLink>
-          <NavItem></NavItem>
+          <Link to="/" style={{textDecoration: "none",}}>
+            <h1 style={{ color: cur_theme.textColor, fontSize: "2.8rem", padding: "20px" }}>👨‍💻</h1>
+
+          </Link>
+          {/* <NavLink></NavLink> */}
           <NavItem icon={<BiMenuAltRight />}>
             <DropdownMenu />
           </NavItem>
@@ -54,8 +60,8 @@ export function Nav(props) {
 
 function Navbar(props) {
   return (
-    <nav className="navbar">
-      <ul className="navbar-nav">{props.children}</ul>
+    <nav className="navbar" style={{ width: "100%", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+      <ul className="navbar-nav" style={{ display: "flex", justifyContent: "space-between" }}>{props.children}</ul>
     </nav>
   );
 }
@@ -63,11 +69,16 @@ function Navbar(props) {
 
 */
 function NavItem(props) {
+
+  const handleBlur = (e) => {
+    console.log('on blur')
+    setOpen(!open)
+  }
   const [open, setOpen] = useState(false);
   return (
     <NavItemStyle>
       <IconButtonStyle>
-        <a href="#/" onClick={() => setOpen(!open)}>
+        <a href="#/" onClick={() => setOpen(!open)} >
           {props.icon}
         </a>
 
@@ -90,6 +101,9 @@ function NavLink(props) {
 }
 
 function DropdownMenu(props) {
+
+
+
   function DropdownItem(props) {
     return (
       <MenuItemStyle href="#/">
@@ -106,17 +120,17 @@ function DropdownMenu(props) {
         {/* <DropdownItem leftIcon={<InfoIcon />}>
           <h3>About this website</h3>
         </DropdownItem> */}
-        <Link to="/">
+        <Link to="/" onMouseDown={(e) => e.preventDefault()}>
           <DropdownItem leftIcon={<RiHomeHeartLine />}>
             <h3>Home</h3>
           </DropdownItem >
         </Link>
-        <Link to="/portfolio">
+        <Link to="/portfolio" onMouseDown={(e) => e.preventDefault()}>
           <DropdownItem leftIcon={<RiBriefcase3Line />}>
             <h3>Portfolio</h3>
           </DropdownItem>
         </Link>
-        <Link to="/art">
+        <Link to="/art" onMouseDown={(e) => e.preventDefault()}>
           <DropdownItem leftIcon={<RiPaintFill />}>
             <h3>Art</h3>
           </DropdownItem>
@@ -136,7 +150,7 @@ function DropdownMenu(props) {
 function SwitchBitch({ handleTheme }) {
   const [theme, setTheme] = useGlobal("onTheme");
 
-  return <Switch checked={theme} onChange={() => setTheme(!theme)}></Switch>;
+  return <Switch checked={theme} onChange={() => setTheme(!theme)} onMouseDown={(e) => e.preventDefault()} ></Switch>;
 }
 
 /*

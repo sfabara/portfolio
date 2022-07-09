@@ -11,28 +11,29 @@ export function Social() {
         <li>
           <a href="https://www.linkedin.com/in/sfabara/" style={{ color: "inherit" }} target="_blank">
             <IconContainer hoverColor={"#123456"} >
-              <FaLinkedin size={50} />
+              <FaLinkedin size={50} color="#0077B5" />
             </IconContainer>
           </a>
 
+        </li>
+
+        <li>
+          <a href="https://twitter.com/de_central_dan" style={{ color: "inherit" }} target="_blank">
+            <IconContainer hoverColor={"#0e76a8"}>
+              <FaTwitterSquare size={50} color="#1DA1F2" />
+
+            </IconContainer>
+          </a>
         </li>
         <li>
           <a href="https://github.com/sfabara/" style={{ color: "inherit" }} target="_blank">
             <IconContainer>
-              <FaGithubSquare size={50} />
+              <FaGithubSquare size={50} color="#5b5959" />
 
             </IconContainer>
           </a>
 
 
-        </li>
-        <li>
-          <a href="https://twitter.com/de_central_dan" style={{ color: "inherit" }} target="_blank">
-            <IconContainer hoverColor={"#0e76a8"}>
-              <FaTwitterSquare size={50} style={{}} />
-
-            </IconContainer>
-          </a>
         </li>
       </ul>
     </SocialStyles>

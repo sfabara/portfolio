@@ -3,23 +3,34 @@ import { motion } from 'framer-motion'
 import React from 'react'
 
 export const PortfolioHeaderContainer = styled.section`
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
+   display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
-    padding: 15rem 20rem 10rem 20rem;
+    padding: 10rem;
+    flex: 1;
 
     & h1{
         font-size: 5rem;
         text-align: center;
     }
     & h3{
-        font-size: 3rem;
+        font-size: 2rem;
         font-weight: 100;
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif !important;
     }
+    & p {
+        font-size: 2rem;
+        margin: 0rem;
+        text-align: center;
+    }
+
+
+
+
 
 `
+
 export const PortfolioContent = styled.section`
     display: flex;
     align-items: center;
@@ -27,6 +38,9 @@ export const PortfolioContent = styled.section`
     flex-direction: column;
     padding: 0 20rem 0 20rem;
     flex-wrap:wrap;
+    @media (max-width: 900px) {
+        padding: 0 5rem 0 5rem
+    }
 `
 
 export const ProjectCard = styled.div`
@@ -40,6 +54,7 @@ export const ProjectCard = styled.div`
     flex-wrap:wrap;
     flex: 1;
     margin: 0rem 0rem 30rem 0rem;
+
     /* outline: 8px solid  #111318;
     -moz-outline-radius: 16px;
     box-shadow: 10px 10px 0px 20px #111318; */
@@ -48,7 +63,7 @@ export const ProjectCard = styled.div`
 export const ProjectImage = styled.img`
     display:flex;
     flex-direction: column;
-    width: 40rem;
+    width: 50%;
     padding: 2rem;
     flex: 1;
     border-radius: 25px;
@@ -65,10 +80,14 @@ export const ProjectTitle = styled.h2`
 `
 export const ProjectDescription = styled.p`
     font-size: 2.5rem;
-    font-weight: 400;
+    font-weight: 200;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 2.5rem 0 2.5rem 0;
     height: 100%;
+
+    @media (max-width: 900px) {
+        font-size: 2rem
+    }
     `
 
 
@@ -77,6 +96,7 @@ export const ProjectDescription = styled.p`
 
 
 export const Header = styled.div`
+margin-top: 5 rem ;
 `
 
 export const SubHeader = styled.div`
@@ -101,7 +121,6 @@ export const SubHeader = styled.div`
 export const Description = styled.div`
 padding-top: 1rem;
 
-    width: 60rem;
     & p {
         font-weight: 200;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -132,6 +151,14 @@ export const MyButton = styled(motion.div)`
 
     & h2{
         font-size: 1.9rem !important;
+    }
+
+    @media (max-width: 900px) {
+        padding: 14px;
+        width: 13rem;
+        & h2{
+            font-size: 1.5rem !important;
+        }
     }
 
 `;

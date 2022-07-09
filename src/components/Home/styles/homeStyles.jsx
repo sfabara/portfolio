@@ -46,24 +46,38 @@ export const Header = styled.div`
         margin: 5px;
         padding: 5px;
         border-radius: 10px;
+        @media (max-width: 900px) {
+        & h1{
+            font-size: 4rem ;
+        }
+    }
 `
 
 export const SubHeader = styled.div`
+    margin: 20px 0 20px 0;
+    align-items: center;
+    justify-content:center ;
+    display: flex;
     & h3{
         font-family: monospace !important;
         font-weight: 100;
+        text-align:center ;
     }
 `
 export const Description = styled.div`
-    margin: 45px;
+    margin: 40px;
     align-items: center;
     justify-content:center ;
     display: flex;
     & p {
-        width: 70%; 
+        width: 65%; 
         font-weight: 200;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        font-size: 2.5rem;
+        font-size: 60.5em;
+    }
+    @media (max-width: 900px) {
+        margin: 40px 0px 40px 0px;
+        & p { width: 100%}
     }
 
 `
@@ -115,6 +129,7 @@ export const Toolbox = styled(motion.div)`
     border-radius: 10px;
     padding: 40px;
     margin: 10rem;
+    
     // box-shadow: 0px 33px 25px 0 #3449eb, 
     //  0 66px 15px 0px #eb5634,
     //  0 99px 5px 0px #fff;
@@ -137,7 +152,7 @@ export const ToolIcon = styled(motion.div)`
 export const Floater = ({ onClick, children, className }) => {
     return (
         <ToolIcon
-            transition={{ type: "spring", stiffness: 125, damping: 7}}
+            transition={{ type: "spring", stiffness: 125, damping: 7 }}
             whileHover={{
 
                 scale: 1.4

@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { BiRightArrow } from 'react-icons/bi'
+import { FaDocker, FaDownload, FaJava, FaLinux } from 'react-icons/fa'
 import { Routes, Route, Link } from "react-router-dom";
 import { HomeContainer, Banner, Header, SubHeader, Description, Button, Toolbox, Floater } from "./styles/homeStyles";
 import Face from '../../img/self-portrait.jpg';
@@ -7,8 +8,14 @@ import Tilted from "./Tilted"
 import { FaReact, FaRust, FaNodeJs, FaPython, FaCss3, FaHtml5, FaNode } from "react-icons/fa"
 import "./styles/home.css"
 import ReactTooltip from 'react-tooltip';
+import { setGlobal, useGlobal } from "reactn";
+import { useTheme } from "styled-components";
 
-export function Home() {
+export function Home(props) {
+
+  const theme = useTheme()
+
+
   return (
     <body>
 
@@ -24,20 +31,29 @@ export function Home() {
           <h1 style={{}}>Sebastian Fabara</h1>
         </Header>
         <SubHeader>
-          <h3>Full Stack | Web 3.0 | Design</h3>
+          <h3>Software Engineer</h3>
         </SubHeader>
         <Description>
           <p>
-            I do all sorts of stuff at work and at home please be impressed by this page and hire me I promise to do good, always.
+            Fascinated with all things technology. From mobile to web and from CI/CD to crypto and web 3.0.
           </p>
         </Description>
 
-        <Link to="/portfolio" style={{ color: "inherit", textDecoration: "none" }}>
-          <Button>
-            <h3>My Portfolio</h3><BiRightArrow size={25} />
+        <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap", alignItems: "center", justifyContent: "center" }}>
+
+          <Link to="/portfolio" style={{ color: theme.textColor, textDecoration: "none" }}>
+            <Button>
+              <h3 >Portfolio</h3><BiRightArrow size={25} style={{ marginLeft: 5 }} />
+            </Button>
+
+          </Link>
+
+          <Button >
+            <h3>Resume</h3><FaDownload size={20} style={{ marginLeft: 5 }} />
           </Button>
 
-        </Link>
+
+        </div>
 
 
       </HomeContainer>
@@ -70,7 +86,7 @@ export function Home() {
           </Floater>
 
           <Floater>
-            <FaNodeJs data-tip="Javascript" size={70} className="js" />
+            <FaJava data-tip="Typescript" size={70} className="js" />
 
 
           </Floater>
@@ -82,9 +98,24 @@ export function Home() {
             <FaHtml5 data-tip="HTML" size={70} className="html5" />
           </Floater>
 
+          <Floater>
+            <FaDocker data-tip="Docker" size={70} className="docker" />
+          </Floater>
+
+          <Floater>
+            <FaLinux data-tip="Linux" size={70} className="linux" />
+          </Floater>
+
+
           <ReactTooltip place="bottom" className="tooltip" />
 
         </Toolbox>
+
+        {/* <Toolbox className="toolbox" >
+
+        </Toolbox> */}
+
+
       </HomeContainer>
 
 

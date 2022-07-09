@@ -17,6 +17,7 @@ export const HeadStyle = styled.header`
     backdrop-filter: saturate(180%) blur(50px);
   }
 
+
 `;
 
 export const DropDownStyle = styled.div`
@@ -46,7 +47,6 @@ export const NavLinksStyle = styled.div`
   display: flex;
   flex-grow: 9;
   position: relative;
-  align-items: center;
   justify-content: flex-start;
   & ul {
     position: relative;
@@ -75,6 +75,8 @@ export const NavItemStyle = styled.li`
   position: relative;
   display: flex;
   margin: 1rem;
+  justify-content:center ;
+  align-items: center ;
   & a {
     position: relative;
     text-decoration: none;

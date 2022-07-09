@@ -39,6 +39,16 @@
 
 }
 
+.docker{
+    box-shadow: inset 10px 12px 30px #0db7ed, inset -10px -10px 20px #384d54 ;
+
+}
+
+.linux{
+    box-shadow: inset 10px 12px 30px #f0da11, inset -10px -10px 20px #384d54 ;
+
+}
+
 .tooltip {
     font-size: 20px !important;
     pointer-events: auto !important;
