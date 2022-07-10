@@ -7,7 +7,7 @@ export const HomeContainer = styled.section`
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 10rem;
+    padding: 7rem;
 
     & h1{
         font-size: 5rem;
@@ -128,7 +128,7 @@ export const Toolbox = styled(motion.div)`
     flex-wrap: wrap;
     border-radius: 10px;
     padding: 40px;
-    margin: 10rem;
+    margin: 8rem;
     
     // box-shadow: 0px 33px 25px 0 #3449eb, 
     //  0 66px 15px 0px #eb5634,

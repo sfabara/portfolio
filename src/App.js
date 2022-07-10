@@ -8,7 +8,7 @@ import "./styles/App.css";
 import { setGlobal, useGlobal } from "reactn";
 
 // React Routing
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, withRouter} from "react-router-dom";
 import HomePage from "./pages/HomePage.js"
 import PortfolioPage from "./pages/PortfolioPage"
 import ArtPage from "./pages/ArtPage"
@@ -35,6 +35,7 @@ const App = () => {
           <Social />
 
           <Routes>
+
             <Route path="/" element={<HomePage />} />
             <Route path="portfolio" element={<PortfolioPage />} />
             <Route path="art" element={<ArtPage />} />
@@ -47,5 +48,10 @@ const App = () => {
     </div>)
 
 }
+
+
+
+
+
 
 export default App;

@@ -60,7 +60,9 @@ export function Home(props) {
 
 
       <HomeContainer>
-        <h1>My Toolbox</h1>
+        <Header>
+          <h1>My Toolbox</h1>
+        </Header>
         {/* <Description>
           <p >
               

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { ProjectImage, ProjectCard, PortfolioHeaderContainer, PortfolioContent, Header, SubHeader, Description, Button, ProjectContent, ProjectTitle, ProjectDescription } from "../Portfolio/styles/portfolioStyles";
 import content from "../../content/portfolio.json"
+import { experimentalStyled } from "@mui/material";
 
 
 export function Portfolio() {
@@ -29,7 +30,7 @@ export function Portfolio() {
   const renderCards = () => {
 
     return content.map(exp => {
-      return <Card title={exp.title} description={exp.description} />
+      return <Card title={exp.title} description={exp.description} key={exp.id}/>
     })
 
 

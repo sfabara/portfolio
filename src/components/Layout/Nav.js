@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { BiMenuAltRight } from 'react-icons/bi'
 import { Link, Navigate } from "react-router-dom";
 import { Switch } from "@material-ui/core";
-import { ThemeProvider , useTheme} from "styled-components";
+import { ThemeProvider, useTheme } from "styled-components";
 import { getTheme } from "../../getTheme.js";
 import {
   HeadStyle,
@@ -17,6 +17,7 @@ import { setGlobal, useGlobal } from "reactn";
 import { RiHomeHeartLine, RiBriefcase3Line, RiPaintFill } from 'react-icons/ri'
 
 import "./styles/Nav.css";
+import { useLocation } from "react-router-dom";
 
 setGlobal({ onTheme: true });
 
@@ -44,7 +45,7 @@ export function Nav(props) {
     <ThemeProvider theme={getTheme(theme)}>
       <HeadStyle>
         <Navbar>
-          <Link to="/" style={{textDecoration: "none",}}>
+          <Link to="/" style={{ textDecoration: "none", }}>
             <h1 style={{ color: cur_theme.textColor, fontSize: "2.8rem", padding: "20px" }}>👨‍💻</h1>
 
           </Link>
@@ -65,20 +66,62 @@ function Navbar(props) {
     </nav>
   );
 }
-/*
 
+/*
 */
+
+  //ratchet af.
+
 function NavItem(props) {
 
-  const handleBlur = (e) => {
-    console.log('on blur')
-    setOpen(!open)
+
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    setOpen(false)
+  }, [pathname]);
+
+
+  const catMenu = useRef(null)
+
+  // const handleBlur = (e) => {
+  //   console.log('on blur')
+  //   setOpen(!open)
+  // }
+  const handleClose = (e) => {
+    var menu = document.querySelector(".dropdown-menu");
+
+    // console.log("menu", menu)
+    if (menu) {
+
+
+      console.log("target", menu.contains(e.target))
+
+      if (catMenu.current && open && !menu.contains(e.target) && !catMenu.current.contains(e.target)) {
+        console.log("closing...")
+        setOpen(false)
+      }
+
+    }
+
+
+
+
   }
+  document.addEventListener('mousedown', handleClose)
+
+  const handleDropdown = () => {
+    setOpen(!open)
+
+  }
+
+
+
   const [open, setOpen] = useState(false);
   return (
     <NavItemStyle>
       <IconButtonStyle>
-        <a href="#/" onClick={() => setOpen(!open)} >
+        <a href="#/" onClick={handleDropdown} ref={catMenu} >
           {props.icon}
         </a>
 
@@ -115,12 +158,9 @@ function DropdownMenu(props) {
   }
 
   return (
-    <DropDownStyle>
+    <DropDownStyle className="dropdown-menu">
       <IconButtonStyle>
-        {/* <DropdownItem leftIcon={<InfoIcon />}>
-          <h3>About this website</h3>
-        </DropdownItem> */}
-        <Link to="/" onMouseDown={(e) => e.preventDefault()}>
+        <Link to="/" >
           <DropdownItem leftIcon={<RiHomeHeartLine />}>
             <h3>Home</h3>
           </DropdownItem >
