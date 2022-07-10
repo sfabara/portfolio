@@ -28,7 +28,7 @@ export function Home(props) {
 
 
         <Header>
-          <h1 style={{}}>hello</h1>
+          <h1 style={{}}>Sebastian Fabara</h1>
         </Header>
         <SubHeader>
           <h3>Software Engineer</h3>
