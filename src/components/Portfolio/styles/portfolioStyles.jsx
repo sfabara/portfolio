@@ -24,12 +24,11 @@ export const PortfolioHeaderContainer = styled.section`
         margin: 0rem;
         text-align: center;
     }
-
-
-
-
-
 `
+
+
+
+
 
 export const PortfolioContent = styled.section`
     display: flex;
@@ -43,6 +42,10 @@ export const PortfolioContent = styled.section`
     }
 `
 
+// =================================
+// Project Card
+// =================================
+
 export const ProjectCard = styled.div`
     display: flex;
     flex-direction: row;
@@ -53,7 +56,7 @@ export const ProjectCard = styled.div`
     height: 10rem;
     flex-wrap:wrap;
     flex: 1;
-    margin: 0rem 0rem 30rem 0rem;
+    margin: 0rem 0rem 25rem 0rem;
 
     /* outline: 8px solid  #111318;
     -moz-outline-radius: 16px;
@@ -77,6 +80,9 @@ export const ProjectContent = styled.div`
 `
 export const ProjectTitle = styled.h2`
     font-size: 3.2rem;
+    @media (max-width: 900px) {
+        font-size: 2.5rem
+    }
 `
 export const ProjectDescription = styled.p`
     font-size: 2.5rem;
@@ -86,10 +92,31 @@ export const ProjectDescription = styled.p`
     height: 100%;
 
     @media (max-width: 900px) {
-        font-size: 2rem
+        font-size: 1.9rem
     }
     `
 
+export const TagContainer = styled.div`
+    display: flex ;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap ;
+    margin: 10px 0px 30px 0px;
+
+`
+
+export const Tag = styled.span`
+    background-color:${(props) => props.theme.accent};
+    padding: 5px 10px 5px 10px;
+    margin: 5px;
+    border-radius: 10px ;  
+    font-size: 2rem ;
+    @media (max-width: 900px) {
+
+            font-size: 1.5rem ;
+    }
+
+`
 
 
 ///Headers stuffs
@@ -97,6 +124,11 @@ export const ProjectDescription = styled.p`
 
 export const Header = styled.div`
 margin-top: 5 rem ;
+@media (max-width: 900px) {
+        & h1{
+            font-size: 4rem ;
+        }
+    }
 `
 
 export const SubHeader = styled.div`

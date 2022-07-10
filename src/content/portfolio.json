@@ -2,11 +2,11 @@
     {
         "id": 1,
         "title": "MiSu",
-        "description": "Designed and developed MiSu - iOT home permissions scheduling mobile application. Used AWS lambda functions and react native. MiSu allows for a user to invite people into their home with scheduled permissions of specific Iot connected devices in users home.",
+        "description": "Designed and developed MiSu - IoT home permissions scheduling mobile application. Used AWS lambda functions and react native. MiSu allows for a user to invite people into their home with scheduled permissions of specific IoT connected devices in users home.",
         "technologies": [
             "AWS",
             "React Native",
-            "Iot"
+            "IoT"
         ],
         "img": "null"
     },
@@ -28,7 +28,9 @@
         "technologies": [
             "Javascript",
             "Electrum",
-            "Nginx"
+            "Nginx",
+            "bitcoin.js"
+
         ],
         "img": "null"
     },
@@ -43,5 +45,6 @@
         "id": 5,
         "title": "arweave_wallet",
         "description": "Client-side arweave wallet with send/receive functionality and file uploader functions. Export created wallet keys and import existing wallet."
+        ,"technologies": ["React", "Vite", "Arweave"]
     }
 ]

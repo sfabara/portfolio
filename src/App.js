@@ -8,7 +8,7 @@ import "./styles/App.css";
 import { setGlobal, useGlobal } from "reactn";
 
 // React Routing
-import { Routes, Route, withRouter} from "react-router-dom";
+import { Routes, Route, withRouter } from "react-router-dom";
 import HomePage from "./pages/HomePage.js"
 import PortfolioPage from "./pages/PortfolioPage"
 import ArtPage from "./pages/ArtPage"
@@ -21,21 +21,20 @@ const App = () => {
   console.log("Theme: ", useGlobal("onTheme")[0]);
 
   useEffect(() => {
-    if (theTheme == false) 
+    if (theTheme == false)
       setTheme("light");
-    else 
+    else
       setTheme("dark");
   });
   return (
     <div className="App">
       <ThemeProvider theme={getTheme(theme)}>
-        <Nav />
+       <Nav setTheme={setTheme}/>
 
         <Root>
           <Social />
 
           <Routes>
-
             <Route path="/" element={<HomePage />} />
             <Route path="portfolio" element={<PortfolioPage />} />
             <Route path="art" element={<ArtPage />} />

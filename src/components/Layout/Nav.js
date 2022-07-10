@@ -21,7 +21,7 @@ import { useLocation } from "react-router-dom";
 
 setGlobal({ onTheme: true });
 
-export function Nav(props) {
+export function Nav({}) {
   const [theme, setTheme] = useState("light");
   const [theTheme, setTheTheme] = useGlobal("onTheme");
 
@@ -170,11 +170,11 @@ function DropdownMenu(props) {
             <h3>Portfolio</h3>
           </DropdownItem>
         </Link>
-        <Link to="/art" onMouseDown={(e) => e.preventDefault()}>
+        {/* <Link to="/art" onMouseDown={(e) => e.preventDefault()}>
           <DropdownItem leftIcon={<RiPaintFill />}>
             <h3>Art</h3>
           </DropdownItem>
-        </Link>
+        </Link> */}
 
 
         <DropdownItem

@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { ProjectImage, ProjectCard, PortfolioHeaderContainer, PortfolioContent, Header, SubHeader, Description, Button, ProjectContent, ProjectTitle, ProjectDescription } from "../Portfolio/styles/portfolioStyles";
+import { ProjectImage, ProjectCard, PortfolioHeaderContainer, PortfolioContent, Header, SubHeader, Description, Button, ProjectContent, ProjectTitle, ProjectDescription, Tag, TagContainer } from "../Portfolio/styles/portfolioStyles";
 import content from "../../content/portfolio.json"
 import { experimentalStyled } from "@mui/material";
 
 
 export function Portfolio() {
 
-  const Card = ({ title, description }) => {
+  const Card = ({ title, description, technologies }) => {
     return (
       <ProjectCard>
         <ProjectContent>
@@ -14,6 +14,19 @@ export function Portfolio() {
           <ProjectDescription>
             {description}
           </ProjectDescription>
+          <TagContainer>
+            {/* <Tag>Meow</Tag>
+            <Tag>Meow</Tag>
+            <Tag>Meow</Tag>
+            <Tag>Meow</Tag> */}
+            {technologies && technologies.map(tech => {
+              return <Tag>{tech}</Tag>
+            })}
+
+
+          </TagContainer>
+
+
           <Button>
             <h2>
               View Project
@@ -30,7 +43,7 @@ export function Portfolio() {
   const renderCards = () => {
 
     return content.map(exp => {
-      return <Card title={exp.title} description={exp.description} key={exp.id}/>
+      return <Card title={exp.title} description={exp.description} key={exp.id} technologies={exp.technologies} />
     })
 
 
