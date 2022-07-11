@@ -16,7 +16,7 @@ export const HomeContainer = styled.section`
     & h3{
         font-size: 2rem;
         font-weight: 100;
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif !important;
+        font-family: 'Arial Narrow Bold', sans-serif ;
     }
     & p {
         font-size: 2rem;

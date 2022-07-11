@@ -8,7 +8,7 @@
             "React Native",
             "IoT"
         ],
-        "img": "null"
+        "img": "https://stirlab.org/wp-content/uploads/Screen-Shot-2021-08-03-at-1.18.09-PM-2-538x1024.png"
     },
     {
         "id": 2,
@@ -19,7 +19,7 @@
             "React Native",
             "Nginx"
         ],
-        "img": "null"
+        "img": "https://www.bytefederal.com/wp-content/uploads/2021/12/OPTION3-INSTAGRAM.png"
     },
     {
         "id": 3,
@@ -32,19 +32,20 @@
             "bitcoin.js"
 
         ],
-        "img": "null"
+        "img": "https://opengraph.githubassets.com/09dcf964985fac8e5e60c9417d7130b33f891a6fdfc5c8d17679d4e5a0e6c6b2/marscoin/marscoin"
     },
     {
         "id" : 4,
         "title": "pubsub_api",
         "description": "REST API to keep up with on sale Publix sandwiches.",
         "technologies": ["React", "CSS", "Python", "Docker"],
-        "img": "null"
+        "img": "https://assets3.thrillist.com/v1/image/2729526/size/tl-gif_overlay.jpeg"
     },
     {
         "id": 5,
         "title": "arweave_wallet",
         "description": "Client-side arweave wallet with send/receive functionality and file uploader functions. Export created wallet keys and import existing wallet."
-        ,"technologies": ["React", "Vite", "Arweave"]
+        ,"technologies": ["React", "Vite", "Arweave"],
+        "img": "https://3246948301-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-LRMphNRIDGSg4iSR6kj%2Fuploads%2Fgit-blob-60e5c5eb11bcfef1411e4434ff899107cb6a85a1%2Fimage%20(9)%20(1).png?alt=media"
     }
 ]

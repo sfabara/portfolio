@@ -1,12 +1,13 @@
 import React, { useState } from "react";
-import { ProjectImage, ProjectCard, PortfolioHeaderContainer, PortfolioContent, Header, SubHeader, Description, Button, ProjectContent, ProjectTitle, ProjectDescription, Tag, TagContainer } from "../Portfolio/styles/portfolioStyles";
+import { ProjectImage, ProjectCard, PortfolioHeaderContainer, PortfolioContent, Header, SubHeader, Description, Button, ProjectContent, ProjectImageContainer, ProjectTitle, ProjectDescription, Tag, TagContainer } from "../Portfolio/styles/portfolioStyles";
 import content from "../../content/portfolio.json"
 import { experimentalStyled } from "@mui/material";
+import { maxHeight } from "@mui/system";
 
 
 export function Portfolio() {
 
-  const Card = ({ title, description, technologies }) => {
+  const Card = ({ title, description, technologies, img }) => {
     return (
       <ProjectCard>
         <ProjectContent>
@@ -33,8 +34,17 @@ export function Portfolio() {
             </h2>
           </Button>
         </ProjectContent>
-        <ProjectImage src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" />
 
+        {/* <div style={{ width: "50rem", minHeight: "30rem", maxHeight: "45rem", display: "flex", justifyContent: "center", backgroundColor: "grey", borderRadius: 10 }}>
+
+          <ProjectImage src={img} />
+
+
+        </div> */}
+        <ProjectImageContainer>
+          <ProjectImage src={img} />
+
+        </ProjectImageContainer>
 
       </ProjectCard>
     )
@@ -43,7 +53,7 @@ export function Portfolio() {
   const renderCards = () => {
 
     return content.map(exp => {
-      return <Card title={exp.title} description={exp.description} key={exp.id} technologies={exp.technologies} />
+      return <Card title={exp.title} description={exp.description} key={exp.id} technologies={exp.technologies} img={exp.img} />
     })
 
 

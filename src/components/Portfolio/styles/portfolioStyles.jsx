@@ -49,7 +49,7 @@ export const PortfolioContent = styled.section`
 export const ProjectCard = styled.div`
     display: flex;
     flex-direction: row;
-    background-color: #00000020;
+    background-color: #00000010;
     border-radius: 15px;
     width: 80%;
     padding: 2rem;
@@ -63,13 +63,25 @@ export const ProjectCard = styled.div`
     box-shadow: 10px 10px 0px 20px #111318; */
 `
 
+export const ProjectImageContainer = styled.div`
+width: 50rem;
+min-height: 30rem;
+max-height: 38rem;
+display: flex;
+justify-content: center;
+background: ${(props) => props.theme.gradient};
+box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+border-radius: 10px ;
+padding: 20px;
+height: 45rem;
+`
+
+
 export const ProjectImage = styled.img`
-    display:flex;
-    flex-direction: column;
-    width: 50%;
+    max-width: 80%;
     padding: 2rem;
-    flex: 1;
-    border-radius: 25px;
+    object-fit: contain;
+
 `
 export const ProjectContent = styled.div`
     display:flex;

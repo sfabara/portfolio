@@ -6,6 +6,9 @@ import { HomeContainer, Banner, Header, SubHeader, Description, Button, Toolbox,
 import Face from '../../img/self-portrait.jpg';
 import Tilted from "./Tilted"
 import { FaReact, FaRust, FaNodeJs, FaPython, FaCss3, FaHtml5, FaNode } from "react-icons/fa"
+import { SiTypescript } from "react-icons/si"
+import { MdContactPage } from "react-icons/md"
+
 import "./styles/home.css"
 import ReactTooltip from 'react-tooltip';
 import { setGlobal, useGlobal } from "reactn";
@@ -35,7 +38,7 @@ export function Home(props) {
         </SubHeader>
         <Description>
           <p>
-            Fascinated with all things technology. From mobile to web and from CI/CD to crypto and web 3.0.
+            Fascinated with all things technology. Passionate about learning and working on exciting, bleeding edge technologies. From web to mobile, CI/CD to crypto and web3.0, I love it all.
           </p>
         </Description>
 
@@ -43,13 +46,13 @@ export function Home(props) {
 
           <Link to="/portfolio" style={{ color: theme.textColor, textDecoration: "none" }}>
             <Button>
-              <h3 >Portfolio</h3><BiRightArrow size={25} style={{ marginLeft: 5 }} />
+              <h3 >Portfolio</h3><BiRightArrow size={25} style={{ marginLeft: 8 }} />
             </Button>
 
           </Link>
 
           <Button >
-            <h3>Resume</h3><FaDownload size={20} style={{ marginLeft: 5 }} />
+            <h3>Resume</h3><MdContactPage size={27} style={{ marginLeft: 10 }} />
           </Button>
 
 
@@ -88,17 +91,20 @@ export function Home(props) {
           </Floater>
 
           <Floater>
-            <FaJava data-tip="Typescript" size={70} className="js" />
+            <SiTypescript data-tip="Typescript" size={65} className="ts" />
 
 
           </Floater>
+
+          <Floater>
+            <FaHtml5 data-tip="HTML" size={70} className="html5" />
+          </Floater>
+
           <Floater>
             <FaCss3 data-tip="Css" size={70} className="css" />
 
           </Floater>
-          <Floater>
-            <FaHtml5 data-tip="HTML" size={70} className="html5" />
-          </Floater>
+
 
           <Floater>
             <FaDocker data-tip="Docker" size={70} className="docker" />
