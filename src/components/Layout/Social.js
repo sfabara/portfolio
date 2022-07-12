@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { SocialStyles2, SocialBtn } from "./styles/socialStyles.js";
-import { FaGithubSquare, FaTwitterSquare, FaLinkedin, FaRegEnvelope} from 'react-icons/fa'
+import { FaGithubSquare, FaTwitterSquare, FaLinkedin, FaEnvelopeSquare} from 'react-icons/fa'
 import { motion } from 'framer-motion'
 import { Link } from "react-router-dom";
 import { useTheme } from "styled-components";
@@ -11,7 +11,8 @@ export function Social() {
 
   return (
     <SocialStyles2 linkedin={"#0e76a8"} github={"#171515"} twitter={"#00acee"} >
-      <ul style={{    listStyleType: "none", display: "flex", alignItems: "center", justifyContent: "space-between", width: "100%"}}>
+      <ul style={{    listStyleType: "none", display: "flex", alignItems: "center", justifyContent: "space-around", width: "100%"
+    }}>
         <li>
           <a href="https://www.linkedin.com/in/sfabara/" style={{ color: "inherit" }} target="_blank">
             <IconContainer hoverColor={"#123456"} >
@@ -42,10 +43,10 @@ export function Social() {
         <li>
           <a href="mailto:sbs3128@live.com" style={{ color: "inherit" }} target="_blank">
             <IconContainer>
-              <div style={{backgroundColor: "#fefefe", padding: 10,borderRadius: "5px", width: "25px", height: "25px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-                <FaRegEnvelope size={100} color={theme.accent} strokeWidth={20}/>
+              {/* <div style={{backgroundColor: "#fefefe", padding: 10,borderRadius: "5px", width: "25px", height: "25px", display: "flex", alignItems: "center", justifyContent: "center"}}> */}
+                <FaEnvelopeSquare size={50} color={"#fefefe"}/>
 
-              </div>
+              {/* </div> */}
             </IconContainer>
           </a>
 

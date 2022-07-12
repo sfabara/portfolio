@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { BiRightArrow } from 'react-icons/bi'
 import { FaDocker, FaDownload, FaJava, FaLinux } from 'react-icons/fa'
 import { Routes, Route, Link } from "react-router-dom";
-import { HomeContainer, Banner, Header, SubHeader, Description, Button, Toolbox, Floater } from "./styles/homeStyles";
+import { HomeContainer, Banner, Header, SubHeader, Description, Button, Toolbox, Floater, ButtonsContainer } from "./styles/homeStyles";
 import Face from '../../img/self-portrait.jpg';
 import Tilted from "./Tilted"
 import { FaReact, FaRust, FaNodeJs, FaPython, FaCss3, FaHtml5, FaNode } from "react-icons/fa"
@@ -12,7 +12,8 @@ import "./styles/home.css"
 import ReactTooltip from 'react-tooltip';
 import { setGlobal, useGlobal } from "reactn";
 import { useTheme } from "styled-components";
-import { Social}  from "../Layout/Social";
+import { Social } from "../Layout/Social";
+import Pdf from '../../content/Sebastian_Fabara_Resume.pdf'
 
 export function Home(props) {
 
@@ -42,21 +43,24 @@ export function Home(props) {
           </p>
         </Description>
 
-        <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap", alignItems: "center", justifyContent: "center" }}>
+        <ButtonsContainer>
 
           <Link to="/portfolio" style={{ color: theme.textColor, textDecoration: "none" }}>
             <Button>
               <h3 >Portfolio</h3><BiRightArrow size={25} style={{ marginLeft: 8 }} />
             </Button>
-
           </Link>
 
-          <Button >
-            <h3>Resume</h3><MdContactPage size={27} style={{ marginLeft: 10 }} />
-          </Button>
+          <a href={Pdf} target="_blank" style={{ textDecoration: "none", color: theme.textColor}}>
+            <Button >
+              <h3>Resume</h3><MdContactPage size={27} style={{ marginLeft: 10 }} />
+            </Button>
+          </a>
+        </ButtonsContainer>
 
+        {/* <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap", alignItems: "center", justifyContent: "space-evenly", backgroundColor: "red", width: "40%" }}>
 
-        </div>
+        </div> */}
 
 
       </HomeContainer>
@@ -131,7 +135,7 @@ export function Home(props) {
           <h1>Contact Me</h1>
         </Header>
 
-          <Social />
+        <Social />
 
 
       </HomeContainer>

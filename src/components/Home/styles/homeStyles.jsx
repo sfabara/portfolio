@@ -69,17 +69,32 @@ export const Description = styled.div`
     align-items: center;
     justify-content:center ;
     display: flex;
-    width: 90rem;
+    width: 50rem; 
 
     & p {
-        width: 65%; 
+        text-align: center;
         font-weight: 200;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         font-size: 60.5em;
     }
     @media (max-width: 900px) {
         margin: 40px 0px 40px 0px;
-        & p { width: 40%}
+        width: 90%;
+        & p { width: 100%}
+    }
+
+`
+
+export const ButtonsContainer = styled.div`
+    display: flex; 
+    flex-direction: row;
+
+    flex-wrap: wrap;
+    align-items: center; 
+    justify-content: space-evenly; 
+    width: 60rem;
+    @media (max-width: 800px) {
+        width: 40%;
     }
 
 `
@@ -92,8 +107,8 @@ export const MyButton = styled(motion.div)`
     align-items: center;
     background-color: ${(props) => props.theme.fancyButtonColor};
     padding: 20px;
-    margin: 4rem;
     border-radius: 16px;
+    margin: 2rem;
     outline: solid  #111318;
     -moz-outline-radius: 16px;
     box-shadow: 5px 5px 0px 4px #111318;

@@ -79,7 +79,6 @@ height: 45rem;
 
 export const ProjectImage = styled.img`
     max-width: 80%;
-    padding: 2rem;
     object-fit: contain;
 
 `
@@ -201,7 +200,7 @@ export const MyButton = styled(motion.div)`
         padding: 14px;
         width: 13rem;
         & h2{
-            font-size: 1.5rem !important;
+            font-size: 1.4rem !important;
         }
     }
 

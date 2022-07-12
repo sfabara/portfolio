@@ -3,11 +3,14 @@ import { ProjectImage, ProjectCard, PortfolioHeaderContainer, PortfolioContent, 
 import content from "../../content/portfolio.json"
 import { experimentalStyled } from "@mui/material";
 import { maxHeight } from "@mui/system";
-
-
+import { FaExternalLinkSquareAlt } from "react-icons/fa"
+import { useTheme } from "styled-components";
 export function Portfolio() {
 
-  const Card = ({ title, description, technologies, img }) => {
+
+  const Card = ({ title, description, technologies, img, link }) => {
+    const theme = useTheme()
+
     return (
       <ProjectCard>
         <ProjectContent>
@@ -27,20 +30,22 @@ export function Portfolio() {
 
           </TagContainer>
 
+          <a href={link}  target="_blank" style={{ textDecoration: "none", color: theme.textColor, display: "flex", alignItems: "center", justifyContent: "center"}} >
+            <Button >
+              <h2>
+                View Project
 
-          <Button>
-            <h2>
-              View Project
-            </h2>
-          </Button>
+              </h2>
+              <FaExternalLinkSquareAlt size={26} />
+
+            </Button>
+
+
+          </a>
+
+
         </ProjectContent>
 
-        {/* <div style={{ width: "50rem", minHeight: "30rem", maxHeight: "45rem", display: "flex", justifyContent: "center", backgroundColor: "grey", borderRadius: 10 }}>
-
-          <ProjectImage src={img} />
-
-
-        </div> */}
         <ProjectImageContainer>
           <ProjectImage src={img} />
 
@@ -53,7 +58,7 @@ export function Portfolio() {
   const renderCards = () => {
 
     return content.map(exp => {
-      return <Card title={exp.title} description={exp.description} key={exp.id} technologies={exp.technologies} img={exp.img} />
+      return <Card title={exp.title} description={exp.description} key={exp.id} technologies={exp.technologies} img={exp.img} link={exp.link} />
     })
 
 
@@ -69,14 +74,10 @@ export function Portfolio() {
         <Header>
           <h1 >Portfolio</h1>
         </Header>
-        {/* <SubHeader>
-          <h3>DevOps</h3>
-          <h3>Fullstack</h3>
-          <h3>Design</h3>
-        </SubHeader> */}
+
         <Description>
           <p style={{ textAlign: "center" }}>
-            Welome to the part where I show off all my skills applied to real world problems :D
+            Includes open source and private projects
           </p>
         </Description>
 
@@ -86,10 +87,6 @@ export function Portfolio() {
 
         {renderCards()}
 
-        {/* <Card dir="left" />
-        <Card dir="right" />
-        <Card dir="left" />
-        <Card dir="right" /> */}
 
       </PortfolioContent>
 
