@@ -21,7 +21,9 @@ export const FooterText = styled.a`
   font-size: 15px;
   margin: 5rem;
   text-decoration: none ;
-  color: inherit;
+  color: ${(props) => props.theme.textColor};
+  text-align: center ;
+
 
   &:hover{
     font-weight: 600;
