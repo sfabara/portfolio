@@ -20,6 +20,13 @@ export const HeadStyle = styled.header`
 
 `;
 
+export const IconImage = styled.img`
+  height: 50px;
+  box-shadow:${props => props.sticky ?"5px 5px 30px #00000050" :  "0px" };
+  border-radius: 5px ;
+`
+
+
 export const DropDownStyle = styled.div`
   position: absolute;
   left: 28px;

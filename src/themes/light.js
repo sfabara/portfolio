@@ -1,7 +1,7 @@
 export default {
   background: "rgb(245, 234, 210)",
-  accent: "#dec0b1",
-  nav: "#dec0b170",
+  accent: "#b0a399",
+  nav: "#7d736b80" ,
   fancyButtonColor: "",
   textColor: "rgb(47, 45, 56)",
   buttonColor: "rgb(47,45,56)",

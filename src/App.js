@@ -32,7 +32,7 @@ const App = () => {
        <Nav setTheme={setTheme}/>
 
         <Root>
-          <Social />
+          {/* <Social /> */}
 
           <Routes>
             <Route path="/" element={<HomePage />} />

@@ -8,11 +8,11 @@ import Tilted from "./Tilted"
 import { FaReact, FaRust, FaNodeJs, FaPython, FaCss3, FaHtml5, FaNode } from "react-icons/fa"
 import { SiTypescript } from "react-icons/si"
 import { MdContactPage } from "react-icons/md"
-
 import "./styles/home.css"
 import ReactTooltip from 'react-tooltip';
 import { setGlobal, useGlobal } from "reactn";
 import { useTheme } from "styled-components";
+import { Social}  from "../Layout/Social";
 
 export function Home(props) {
 
@@ -38,7 +38,7 @@ export function Home(props) {
         </SubHeader>
         <Description>
           <p>
-            Fascinated with all things technology. Passionate about learning and working on exciting, bleeding edge technologies. From web to mobile, CI/CD to crypto and web3.0, I love it all.
+            Fascinated with all things technology. I love to learn new tools and I'm passionate about making systems as efficient as possible.
           </p>
         </Description>
 
@@ -91,7 +91,7 @@ export function Home(props) {
           </Floater>
 
           <Floater>
-            <SiTypescript data-tip="Typescript" size={65} className="ts" />
+            <SiTypescript data-tip="Typescript" size={70} className="ts" />
 
 
           </Floater>
@@ -122,6 +122,16 @@ export function Home(props) {
         {/* <Toolbox className="toolbox" >
 
         </Toolbox> */}
+
+
+      </HomeContainer>
+
+      <HomeContainer>
+        <Header>
+          <h1>Contact Me</h1>
+        </Header>
+
+          <Social />
 
 
       </HomeContainer>

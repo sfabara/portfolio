@@ -11,9 +11,10 @@ import {
   NavItemStyle,
   IconButtonStyle,
   MenuItemStyle,
+  IconImage
 } from "./styles/navStyles.js";
 import { setGlobal, useGlobal } from "reactn";
-
+import{ Icon }from "./styles/favicon.png"
 import { RiHomeHeartLine, RiBriefcase3Line, RiPaintFill } from 'react-icons/ri'
 
 import "./styles/Nav.css";
@@ -24,6 +25,7 @@ setGlobal({ onTheme: true });
 export function Nav({}) {
   const [theme, setTheme] = useState("light");
   const [theTheme, setTheTheme] = useGlobal("onTheme");
+  const [sticky, setSticky] = useState(false)
 
   const cur_theme = useTheme()
 
@@ -34,9 +36,21 @@ export function Nav({}) {
 
     window.addEventListener("scroll", function () {
 
+      console.log("is it sticky?",sticky)
+
       var header = document.querySelector("header");
       if (header)
+      {
         header.classList.toggle("sticky", window.scrollY > 0);
+      }
+
+      if(window.scrollY == 0)
+      {
+        setSticky(false)
+      }
+      else
+        setSticky(true)
+
       return
     });
   });
@@ -45,8 +59,8 @@ export function Nav({}) {
     <ThemeProvider theme={getTheme(theme)}>
       <HeadStyle>
         <Navbar>
-          <Link to="/" style={{ textDecoration: "none", }}>
-            <h1 style={{ color: cur_theme.textColor, fontSize: "2.8rem", padding: "20px" }}>👨‍💻</h1>
+          <Link to="/" style={{ textDecoration: "none",margin: "30px" }}>
+            <IconImage src={ require("./styles/favicon.png")} sticky={sticky}/>
 
           </Link>
           {/* <NavLink></NavLink> */}

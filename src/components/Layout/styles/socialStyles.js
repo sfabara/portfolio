@@ -11,7 +11,7 @@ export const SocialStyles = styled.div`
   position: fixed;
   margin: 24rem 0rem 0rem 0rem;
   border-radius: 1rem;
-  padding: .6rem;
+  padding: 1rem;
   box-shadow: 5px 5px 10px #00000040;
   height: 20rem;
   & svg:hover{
@@ -30,6 +30,31 @@ export const SocialStyles = styled.div`
       }
 
     }
+`;
+
+
+export const SocialStyles2 = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap ;
+  background-color: ${(props) => props.theme.accent};
+  margin: 5rem;
+  border-radius: 1rem;
+  box-shadow: 5px 5px 10px #00000040;
+  width: 30rem;
+  padding: 50px;
+
+  & svg:hover{
+    color: ${(props) => props.theme.hoverColor};
+    cursor: pointer;
+  }
+  & li{
+    padding: .5rem;
+  }
+
+
 `;
 
 

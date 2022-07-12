@@ -69,6 +69,8 @@ export const Description = styled.div`
     align-items: center;
     justify-content:center ;
     display: flex;
+    width: 90rem;
+
     & p {
         width: 65%; 
         font-weight: 200;
@@ -77,7 +79,7 @@ export const Description = styled.div`
     }
     @media (max-width: 900px) {
         margin: 40px 0px 40px 0px;
-        & p { width: 100%}
+        & p { width: 40%}
     }
 
 `
