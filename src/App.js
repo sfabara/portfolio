@@ -3,7 +3,7 @@ import { Nav } from "./components/Layout/Nav.js";
 import { Social } from "./components/Layout/Social.js";
 import { ThemeProvider } from "styled-components";
 import { getTheme } from "./getTheme.js";
-import { Root } from "./styles/appStyles.js";
+import { Footer, FooterText, Root } from "./styles/appStyles.js";
 import "./styles/App.css";
 import { setGlobal, useGlobal } from "reactn";
 
@@ -29,7 +29,7 @@ const App = () => {
   return (
     <div className="App">
       <ThemeProvider theme={getTheme(theme)}>
-       <Nav setTheme={setTheme}/>
+        <Nav setTheme={setTheme} />
 
         <Root>
           {/* <Social /> */}
@@ -40,7 +40,17 @@ const App = () => {
             <Route path="art" element={<ArtPage />} />
           </Routes>
 
+
+          <Footer>
+            <FooterText href="https://github.com/sfabara/portfolio" target="_blank">
+              Designed & Developed by Sebastian Fabara
+            </FooterText>
+
+
+          </Footer>
+
         </Root>
+
 
       </ThemeProvider>
 

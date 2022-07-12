@@ -60,7 +60,7 @@ export function Nav({}) {
       <HeadStyle>
         <Navbar>
           <Link to="/" style={{ textDecoration: "none",margin: "30px" }}>
-            <IconImage src={ require("./styles/favicon.png")} sticky={sticky}/>
+            <IconImage src={ require("./styles/favicon.png")} sticky={sticky} onClick={() =>    window.scrollTo(0, 0)}/>
 
           </Link>
           {/* <NavLink></NavLink> */}
