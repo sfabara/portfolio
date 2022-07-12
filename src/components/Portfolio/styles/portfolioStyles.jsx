@@ -38,7 +38,7 @@ export const PortfolioContent = styled.section`
     padding: 0 20rem 0 20rem;
     flex-wrap:wrap;
     @media (max-width: 900px) {
-        padding: 0 5rem 0 5rem
+        padding: 0 0rem 0 0rem
     }
 `
 
@@ -49,6 +49,7 @@ export const PortfolioContent = styled.section`
 export const ProjectCard = styled.div`
     display: flex;
     flex-direction: row;
+    justify-content:center ;
     background-color: #00000010;
     border-radius: 15px;
     width: 80%;
@@ -56,7 +57,11 @@ export const ProjectCard = styled.div`
     height: 10rem;
     flex-wrap:wrap;
     flex: 1;
-    margin: 0rem 0rem 25rem 0rem;
+    margin: 0rem 0rem 23rem 0rem;
+
+    @media (max-width: 700px) {
+        margin: 0rem 0rem 12rem 0rem
+    }
 
     /* outline: 8px solid  #111318;
     -moz-outline-radius: 16px;
@@ -69,18 +74,17 @@ min-height: 30rem;
 max-height: 38rem;
 display: flex;
 justify-content: center;
+align-items: center ;
 background: ${(props) => props.theme.gradient};
 box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 border-radius: 10px ;
 padding: 20px;
-height: 45rem;
 `
 
 
 export const ProjectImage = styled.img`
     max-width: 80%;
     object-fit: contain;
-
 `
 export const ProjectContent = styled.div`
     display:flex;
