@@ -19,6 +19,7 @@ import { RiHomeHeartLine, RiBriefcase3Line, RiPaintFill } from 'react-icons/ri'
 
 import "./styles/Nav.css";
 import { useLocation } from "react-router-dom";
+import { FaMoon, FaSun } from "react-icons/fa";
 
 setGlobal({ onTheme: true });
 
@@ -158,6 +159,7 @@ function NavLink(props) {
 }
 
 function DropdownMenu(props) {
+  const [theTheme, setTheTheme] = useGlobal("onTheme");
 
 
 
@@ -170,6 +172,7 @@ function DropdownMenu(props) {
       </MenuItemStyle>
     );
   }
+
 
   return (
     <DropDownStyle className="dropdown-menu">
@@ -192,9 +195,9 @@ function DropdownMenu(props) {
 
 
         <DropdownItem
-          leftIcon={<SwitchBitch theme={props.theme}></SwitchBitch>}
+          rightIcon={<SwitchBitch theme={props.theme}></SwitchBitch>}
         >
-          <h3>Night Mode</h3>
+          {theTheme ?  <FaMoon size={5}/>:  <FaSun size={5}/>}
         </DropdownItem>
       </IconButtonStyle>
     </DropDownStyle>
