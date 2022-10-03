@@ -37,7 +37,6 @@ export function Nav({}) {
 
     window.addEventListener("scroll", function () {
 
-      console.log("is it sticky?",sticky)
 
       var header = document.querySelector("header");
       if (header)

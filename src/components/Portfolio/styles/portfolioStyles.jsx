@@ -75,16 +75,18 @@ max-height: 38rem;
 display: flex;
 justify-content: center;
 align-items: center ;
-background: ${(props) => props.theme.gradient};
-box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+/* background: ${(props) => props.theme.gradient}; */
+/* box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset; */
 border-radius: 10px ;
 padding: 20px;
 `
 
 
 export const ProjectImage = styled.img`
-    max-width: 80%;
+    max-width:100%;
+max-height:100%;
     object-fit: contain;
+    border-radius: 10px;
 `
 export const ProjectContent = styled.div`
     display:flex;

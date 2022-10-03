@@ -1,6 +1,18 @@
 [
     {
         "id": 1,
+        "title": "Fast Auth",
+        "description": "Developed SSO (Single Sign On) authentication for Byte Wallet ©. Thoroughly documented SSO implementation specifications with webhook testing functionalities.",
+        "technologies": [
+            "React Native",
+            "SSO",
+            "Documentation"
+        ],
+        "img": "https://fast.bytefederal.com/img/FALogo-Rocket.svg",
+        "link": "https://fast.bytefederal.com/"
+    },
+    {
+        "id": 2,
         "title": "MiSu",
         "description": "Designed and developed MiSu - IoT home permissions scheduling mobile application. Used AWS lambda functions and react native. MiSu allows for a user to invite people into their home with scheduled permissions of specific IoT connected devices in users home.",
         "technologies": [
@@ -12,7 +24,7 @@
         "link": "https://stirlab.org/senior-design-team-defends-misu/"
     },
     {
-        "id": 2,
+        "id": 3,
         "title": "Byte Wallet",
         "description": "Onboarded fiat banking features with 3rd part Solid Financial API. Worked on Python Fast API backend do create endpoints and created calls and screens in React Native.",
         "technologies": [
@@ -24,7 +36,7 @@
         "link": "https://www.bytefederal.com/registration-with-mobile-phone"
     },
     {
-        "id": 3,
+        "id": 4,
         "title": "Pebas",
         "description": "Open source marscoin transaction builder engine. Connects with Electrum RPC for direct access to Marscoin blockchain data. Constructs transactions for MartianRepublic client side marscoin wallet using tx input and outputs and broadcasts transaction directly to blockchain.",
         "technologies": [
@@ -38,7 +50,7 @@
         ,"link" : "https://github.com/marscoin/pebas"
     },
     {
-        "id" : 4,
+        "id" : 5,
         "title": "pubsub_api",
         "description": "REST API to keep up with on sale Publix sandwiches.",
         "technologies": ["React", "CSS", "Python", "Docker"],
@@ -46,7 +58,7 @@
         "link": "https://github.com/zenith110/pubsub_api"
     },
     {
-        "id": 5,
+        "id": 6,
         "title": "arweave_wallet",
         "description": "Client-side arweave wallet with send/receive functionality and file uploader functions. Export created wallet keys and import existing wallet."
         ,"technologies": ["React", "Vite", "Arweave"],
